@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Mini-Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <h1>Web Mini-Project</h1>
+    <p class="subtitle">A starter page served by an Express server.</p>
+
+    <!-- Clicking this asks the server for a message (see script.js) -->
+    <button id="load-btn" type="button">Get message from server</button>
+
+    <!-- The server's reply appears here. aria-live announces updates to screen readers. -->
+    <p id="output" class="output" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
