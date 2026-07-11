@@ -1,0 +1,20 @@
+# ---------------------------------------------------------
+# node_modules holds ALL installed packages, including
+# Express. Ignoring this one folder ignores Express too —
+# it does not need its own line. Anyone can rebuild it
+# with `npm install`.
+# ---------------------------------------------------------
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables / secrets
+.env
+
+# macOS system file
+.DS_Store
+
+# NOTE: do NOT ignore server.js — that is your own code
+# and must be committed.
