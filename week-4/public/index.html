@@ -3,20 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Mini-Project</title>
+  <title>Check-In Logger</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <main class="card">
-    <h1>Web Mini-Project</h1>
-    <p class="subtitle">A starter page served by an Express server.</p>
+    <h1>Check-In Logger</h1>
+    <p class="subtitle">Times are recorded and stored by the server.</p>
 
-    <!-- Clicking this asks the server for a message (see script.js) -->
-    <button id="load-btn" type="button">Get message from server</button>
+    <div class="columns">
 
-    <!-- The server's reply appears here. aria-live announces updates to screen readers. -->
-    <p id="output" class="output" aria-live="polite"></p>
+      <!-- LEFT: check in -->
+      <section class="panel checkin">
+        <h2>Check In</h2>
+        <p class="clock" id="clock">--:--:--</p>
+        <button id="checkin-btn" type="button">Check In</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <!-- RIGHT: stored timestamps -->
+      <section class="panel log">
+        <h2>Timestamps</h2>
+        <ul id="log-list" class="log-list"></ul>
+      </section>
+
+    </div>
   </main>
 
   <script src="script.js"></script>

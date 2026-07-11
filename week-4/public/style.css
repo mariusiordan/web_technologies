@@ -1,5 +1,3 @@
-/* A clean, minimal starter you can restyle however you like */
-
 * { box-sizing: border-box; }
 
 body {
@@ -14,8 +12,8 @@ body {
 }
 
 .card {
-  background: #ffffff;
-  max-width: 420px;
+  background: #fff;
+  max-width: 720px;
   width: calc(100% - 2rem);
   padding: 2rem;
   border-radius: 16px;
@@ -23,14 +21,28 @@ body {
   text-align: center;
 }
 
-h1 {
-  margin: 0 0 0.25rem;
-  font-size: 1.6rem;
-}
+h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
+.subtitle { margin: 0 0 1.5rem; color: #64748b; }
 
-.subtitle {
-  margin: 0 0 1.5rem;
-  color: #64748b;
+.columns { display: flex; gap: 1.25rem; }
+
+.panel {
+  flex: 1;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: center;
+}
+.panel.checkin { background: #f0f9ff; border-color: #bae6fd; }
+
+h2 { margin: 0 0 0.75rem; font-size: 1.1rem; }
+
+.clock {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0369a1;
+  margin: 0 0 1rem;
 }
 
 button {
@@ -43,12 +55,26 @@ button {
   cursor: pointer;
   transition: background 0.2s ease;
 }
-
 button:hover { background: #1d4ed8; }
 
-.output {
-  margin-top: 1.25rem;
-  min-height: 1.5rem;
-  font-weight: 500;
-  color: #0f766e;
+.status { margin: 0.75rem 0 0; min-height: 1.2rem; color: #0f766e; font-weight: 500; }
+
+/* Scrollable list of stored timestamps */
+.log-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  text-align: left;
 }
+.log-list li {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+}
+.log-list li:first-child { color: #0369a1; font-weight: 600; }
+.empty { color: #94a3b8; font-style: italic; font-family: inherit; }
+
+@media (max-width: 640px) { .columns { flex-direction: column; } }
