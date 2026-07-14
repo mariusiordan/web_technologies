@@ -72,3 +72,46 @@ function createCounter() {
 const myCounter = createCounter();
 //console.log(myCounter()); // 1
 //console.log(myCounter()); // 2
+
+
+//Connect the API for plants
+const loadPlantsBtn = document.getElementById("loadPlantsBtn");
+const plantInfo = document.getElementById("plant-info");
+
+loadPlantsBtn.addEventListener("click", function(){
+    fetch("/api/plants")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(plants){
+        let output = ""
+    })
+    plants.forEach(function(plant) {
+        output 
+        += `
+        <div>
+            <h3>${plant.name}</h3>
+            <p>Type: ${plant.type}</p>
+            </div>
+            `;
+    });
+    plantInfo.innerHTML = output;
+    .
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
